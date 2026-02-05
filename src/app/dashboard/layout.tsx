@@ -7,6 +7,7 @@ import { redirect } from "next/navigation"
 import { Footer } from "@/components/footer"
 import { Logo } from "@/components/logo"
 import { SignOutButton } from "@/components/sign-out-button"
+import { MobileNav } from "@/components/mobile-nav"
 
 export default async function DashboardLayout({
     children,
@@ -55,6 +56,7 @@ export default async function DashboardLayout({
                             </span>
                         </div>
                         <SignOutButton />
+                        <MobileNav />
                     </div>
                 </div>
             </header>
