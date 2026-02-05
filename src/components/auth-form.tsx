@@ -38,7 +38,9 @@ export function AuthForm({ mode }: AuthFormProps) {
                 }, {
                     onRequest: () => setLoading(true),
                     onResponse: () => setLoading(false),
-                    onSuccess: () => router.push("/dashboard"),
+                    onSuccess: () => {
+                        window.location.href = "/dashboard";
+                    },
                     onError: (ctx) => setError(ctx.error.message),
                 })
             } else {
@@ -48,7 +50,9 @@ export function AuthForm({ mode }: AuthFormProps) {
                 }, {
                     onRequest: () => setLoading(true),
                     onResponse: () => setLoading(false),
-                    onSuccess: () => router.push("/dashboard"),
+                    onSuccess: () => {
+                        window.location.href = "/dashboard";
+                    },
                     onError: (ctx) => setError(ctx.error.message),
                 })
             }
